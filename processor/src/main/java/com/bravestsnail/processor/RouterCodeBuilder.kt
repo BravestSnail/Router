@@ -21,7 +21,7 @@ class RouterCodeBuilder(
 
     private fun FileSpec.Builder.addInitClass() = apply {
         addType(
-            TypeSpec.classBuilder(fileName)
+            TypeSpec.objectBuilder(fileName)
                 .addSuperinterface(routerAnnotationInit)
                 .addInitMethod(code)
                 .build()

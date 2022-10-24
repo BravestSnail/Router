@@ -25,7 +25,7 @@ class RouterProcessor : AbstractProcessor() {
     /**
      * 处理注解
      *
-     * @param annotations 注解
+     * @param annotations 注解元素
      * @param roundEnv 查询包含特定注解的被注解元素
      * @return
      */
@@ -38,7 +38,7 @@ class RouterProcessor : AbstractProcessor() {
             processingEnv.options[KAPT_KOTLIN_GENERATED_OPTION_NAME] ?: return false
 
         val codeBuilder = CodeBlock.Builder()
-        val fileName = "AnnotationInit_${UUID.randomUUID().toString().replace("-", "")}"
+        val fileName = "RouterInit"
 
         //获取所有被Router注解的元素
         roundEnv.getElementsAnnotatedWith(Router::class.java).forEach {

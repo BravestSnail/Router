@@ -1,8 +1,13 @@
 package com.bravestsnail.router
 
-import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import com.bravestsnail.annotation.Router
 
 @Router("/test")
-class TestActivity: Activity() {
+class TestActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_test)
+    }
 }
