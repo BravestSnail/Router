@@ -5,9 +5,9 @@ KAPT实现的路由框架
 ![Router演示.gif](https://s2.loli.net/2022/10/24/pRncNtJCbhvMULy.gif)
 ## 用法
 ### 初始化
-在合适的时机调用初始化方法
+在合适的时机调用初始化方法, 建议在`Application.onCreate()`调用时机初始化
 ```kotlin
-RouterUtils.init(RouterInit)
+RouterUtils.init(Context)
 ```
 `RouterInit`是KAPT自动生成，因此需要先运行一遍项目才会生成。
 ### 定义路由
