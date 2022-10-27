@@ -44,5 +44,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation project(':routerhandler')
+    implementation project(':processor')
     kapt project(':processor')
+    implementation "com.bravestsnail.router:librarya:1.0.1"
+
+    implementation 'org.ow2.asm:asm:9.4'
 }
