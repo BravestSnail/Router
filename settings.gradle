@@ -3,6 +3,11 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven { url'https://maven.aliyun.com/repository/public/' }
+        maven { url'https://maven.aliyun.com/repository/google/' }
+        maven { url'https://maven.aliyun.com/repository/jcenter/' }
+        maven { url'https://maven.aliyun.com/repository/central/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin'}
     }
 }
 dependencyResolutionManagement {
@@ -10,10 +15,16 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url'https://maven.aliyun.com/repository/public/' }
+        maven { url'https://maven.aliyun.com/repository/google/' }
+        maven { url'https://maven.aliyun.com/repository/jcenter/' }
+        maven { url'https://maven.aliyun.com/repository/central/' }
+        maven { url'C://tmp/' }
+
     }
 }
 rootProject.name = "Router"
 include ':app'
-include ':annotation'
 include ':processor'
 include ':routerhandler'
+include ':test'
